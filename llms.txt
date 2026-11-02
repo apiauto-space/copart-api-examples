@@ -1,0 +1,39 @@
+# copart-api-examples
+
+> Code examples (curl, Python, JavaScript, PHP) for reading Copart auction lots (USA) through apiauto.space, a read-only REST API. Base URL https://api.apiauto.space/v1, header X-API-Key, market=us. A free one-day demo key (100 requests) comes from the Telegram bot https://t.me/apiautospace_bot?start=demo. Not affiliated with Copart.
+
+Key facts:
+
+- Copart lots live in `market=us` together with IAAI lots. The API has no auction filter: a `source` query parameter is ignored. Keep records where `source` is `copart`; in the change feed keep events whose `car_id` starts with `copart:`. Record ids look like `copart:70370576`. A page can hold no Copart lots at all: walk `next_cursor`; `sort=first_seen` wasted the fewest records on 2 November 2026 (it is no contract).
+- Paid plans count every returned lot, including lots of the other auction; the demo counts data requests.
+- Endpoints: GET /v1/cars (filters brand, model, trim, year_min, year_max, price_min, price_max, price_usd_min, price_usd_max, mileage_max, fuel, transmission, body_type, has_photos, is_active, q; sort; cursor pagination; limit up to 100, 20 on the demo), GET /v1/cars/{id}, GET /v1/changes (added, disappeared, price_drop, price_up since a moment), GET /v1/references/{brands,models,dictionaries,markets}, GET /v1/usage.
+- Auction fields are in `raw`: lot_number, damage_main, damage_second, title_doc, bid, buy_now, sale_date, odometer_mi, keys_available, location_branch. `price` is the buy-now price or null; `listing_url` is null for US lots.
+- Server-side only: CORS is off.
+- Client libraries: `pip install apiauto-space` (https://github.com/apiauto-space/apiauto-python), `npm i apiauto` (https://github.com/apiauto-space/apiauto-js), `composer require apiauto/apiauto` (https://github.com/apiauto-space/apiauto-php), `go get github.com/apiauto-space/apiauto-go` (https://github.com/apiauto-space/apiauto-go).
+
+## Examples
+
+- [curl: every request](https://github.com/apiauto-space/copart-api-examples/blob/main/curl/README.md)
+- [Python: first request](https://github.com/apiauto-space/copart-api-examples/blob/main/python/first_request.py)
+- [Python: collect lots across pages](https://github.com/apiauto-space/copart-api-examples/blob/main/python/all_lots.py)
+- [Python: keep a catalog in sync with SQLite](https://github.com/apiauto-space/copart-api-examples/blob/main/python/sync_catalog.py)
+- [Python: export to CSV](https://github.com/apiauto-space/copart-api-examples/blob/main/python/export_csv.py)
+- [Python: download photos](https://github.com/apiauto-space/copart-api-examples/blob/main/python/download_photos.py)
+- [JavaScript: first request](https://github.com/apiauto-space/copart-api-examples/blob/main/javascript/first-request.mjs)
+- [JavaScript: collect lots across pages](https://github.com/apiauto-space/copart-api-examples/blob/main/javascript/all-lots.mjs)
+- [JavaScript: change feed](https://github.com/apiauto-space/copart-api-examples/blob/main/javascript/change-feed.mjs)
+- [PHP: first request](https://github.com/apiauto-space/copart-api-examples/blob/main/php/first-request.php)
+- [PHP: catalog sync from cron](https://github.com/apiauto-space/copart-api-examples/blob/main/php/sync-catalog.php)
+
+## Samples
+
+- [Copart lot](https://github.com/apiauto-space/copart-api-examples/blob/main/samples/copart-lot.json)
+- [Page of lots](https://github.com/apiauto-space/copart-api-examples/blob/main/samples/cars-page-us-copart.json)
+- [Change feed events](https://github.com/apiauto-space/copart-api-examples/blob/main/samples/changes-us-copart.json)
+
+## Documentation
+
+- [Copart API page](https://apiauto.space/en/copart-api/)
+- [API documentation](https://apiauto.space/en/docs/)
+- [OpenAPI schema](https://api.apiauto.space/openapi.json)
+- [Full documentation for LLMs](https://apiauto.space/llms-full.txt)

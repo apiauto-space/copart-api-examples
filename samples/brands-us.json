@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Toyota",
+    "count": 8790
+  },
+  {
+    "name": "Ford",
+    "count": 7542
+  },
+  {
+    "name": "Honda",
+    "count": 7030
+  },
+  {
+    "name": "Chevrolet",
+    "count": 6731
+  },
+  {
+    "name": "Nissan",
+    "count": 6138
+  },
+  {
+    "name": "Hyundai",
+    "count": 4928
+  },
+  {
+    "name": "Kia",
+    "count": 3995
+  },
+  {
+    "name": "Jeep",
+    "count": 3282
+  },
+  {
+    "name": "Mercedes-Benz",
+    "count": 3008
+  },
+  {
+    "name": "BMW",
+    "count": 2698
+  },
+  {
+    "name": "Subaru",
+    "count": 2501
+  },
+  {
+    "name": "Dodge",
+    "count": 2219
+  },
+  {
+    "name": "Volkswagen",
+    "count": 1944
+  },
+  {
+    "name": "Audi",
+    "count": 1667
+  },
+  {
+    "name": "Mazda",
+    "count": 1640
+  }
+]

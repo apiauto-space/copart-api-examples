@@ -1,0 +1,10 @@
+.env
+.envrc
+.env.*
+lots.db
+since.txt
+*.csv
+copart-*/
+__pycache__/
+node_modules/
+*.db-journal

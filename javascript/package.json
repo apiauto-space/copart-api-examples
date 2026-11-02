@@ -1,0 +1,15 @@
+{
+  "name": "copart-api-examples",
+  "private": true,
+  "description": "Copart API examples in JavaScript (Node.js, fetch, no dependencies)",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "first-request": "node first-request.mjs",
+    "all-lots": "node all-lots.mjs",
+    "change-feed": "node change-feed.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 3038995,
+      "car_id": "copart:72639926",
+      "market": "us",
+      "type": "added",
+      "at": "2026-11-02T07:26:07.578575Z",
+      "old_price": null,
+      "new_price": null,
+      "pct": null
+    },
+    {
+      "id": 3039000,
+      "car_id": "copart:67275676",
+      "market": "us",
+      "type": "disappeared",
+      "at": "2026-11-02T07:26:07.581144Z",
+      "old_price": null,
+      "new_price": null,
+      "pct": null
+    }
+  ],
+  "next_cursor": "eyJpZCI6MzAzOTA3OH0"
+}

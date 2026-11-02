@@ -1,0 +1,18 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Copart API examples — apiauto.space",
+  "description": "REST API with Copart auction lots (USA) in JSON: examples in curl, Python, JavaScript and PHP",
+  "folders": ["curl", "python", "javascript", "php", "samples"],
+  "excludeFolders": [],
+  "rules": [
+    "Send the key in the X-API-Key header; base URL https://api.apiauto.space/v1",
+    "Copart lots live in market=us together with IAAI lots",
+    "There is no source query parameter: keep records where source == 'copart' on your side",
+    "In the change feed, keep events whose car_id starts with 'copart:'",
+    "A page of market=us can hold no Copart lots: walk next_cursor, and sort=first_seen wasted the fewest records on 2 November 2026",
+    "Call the API from a server: CORS is off",
+    "Paginate with next_cursor; offset is not supported",
+    "Paid plans count every returned lot, including lots of the other auction; the demo key counts data requests and allows up to 20 cars per request",
+    "Photo links expire in about a day: store the lot id and fetch a fresh record"
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Camry",
+    "count": 2173
+  },
+  {
+    "name": "Corolla",
+    "count": 1808
+  },
+  {
+    "name": "RAV4",
+    "count": 1468
+  },
+  {
+    "name": "Highlander",
+    "count": 672
+  },
+  {
+    "name": "Prius",
+    "count": 643
+  },
+  {
+    "name": "Sienna",
+    "count": 508
+  },
+  {
+    "name": "4Runner",
+    "count": 347
+  },
+  {
+    "name": "Avalon",
+    "count": 158
+  },
+  {
+    "name": "Venza",
+    "count": 120
+  },
+  {
+    "name": "Prius C",
+    "count": 110
+  },
+  {
+    "name": "Prius V",
+    "count": 90
+  },
+  {
+    "name": "Corolla Cross",
+    "count": 88
+  },
+  {
+    "name": "C-HR",
+    "count": 75
+  },
+  {
+    "name": "Yaris",
+    "count": 73
+  },
+  {
+    "name": "Grand Highlander",
+    "count": 63
+  }
+]
