@@ -117,6 +117,7 @@ rate limit the API answers 429 with `Retry-After`. Details: [limits](https://api
 
 | Language | Package | Repository |
 |---|---|---|
+| Python and JavaScript, Copart only | `pip install copart-api`, `npm i copart-api` | [copart-api](https://github.com/apiauto-space/copart-api) |
 | Python | `pip install apiauto-space` | [apiauto-python](https://github.com/apiauto-space/apiauto-python) |
 | JavaScript / TypeScript | `npm i apiauto` | [apiauto-js](https://github.com/apiauto-space/apiauto-js) |
 | PHP | `composer require apiauto/apiauto` | [apiauto-php](https://github.com/apiauto-space/apiauto-php) |
